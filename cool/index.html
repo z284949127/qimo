@@ -1,0 +1,26 @@
+<meta charset='utf8'/>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-align: center;
+        color: #000;
+        text-decoration: none;
+    }
+</style>
+<body>
+<span id="sp"></span>
+<hr/>
+<iframe id="ifr" width="100%" height="90%" src=""></iframe>
+<a href="../index.html">七陌网络</a>
+<script>
+  let arr = [
+    {site: 'irc.gitter.im', mark: 'a page like dos screen'}
+  ];
+  let index = Math.round(Math.random() * arr.length);
+  let arrOne = arr[index === arr.length ? index - 1 : index];
+  document.getElementById('sp').innerHTML = arrOne.mark;
+  document.getElementById('ifr').src = './' + arrOne.site + '/index.html';
+</script>
+</body>
