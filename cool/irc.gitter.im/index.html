@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--<link href="./fonts.googleapis.com/css?family=VT323" rel="stylesheet" type="text/css">-->
+    <link href="./fonts.googleapis.com/css.css" rel="stylesheet" type="text/css">
+    <link href="./css/irc.css" rel="stylesheet" type="text/css">
+    <title>irc.gitter.im</title>
+</head>
+
+<body>
+<script>
+    let quotes = [
+      "&quot;It is not a lack of love, but a lack of IRC that makes unhappy marriages&quot; - Friedrich Nietzsche",
+      "&quot;To IRC is the rarest thing in the world. Most people exist, that is all&quot; - Oscar Wilde",
+      "&quot;No one can make you feel inferior without IRC&quot; - Eleanor Roosevelt",
+      '&quot;Life is really simple, and so is to use Gitter IRC&quot; - Confucius',
+      '&quot;I&#39;m connected from my VT100&quot; - Chuck Norris',
+      '&quot;Definitely alien technology&quot; - Giorgio A. Tsoukalos',
+      '&quot;Stay hungry, stay on IRC&quot; -11 Steve Jobs',
+    ];
+    let index = Math.round(Math.random() * quotes.length);
+    let quote = quotes[index === quotes.length ? index - 1 : index];
+</script>
+<div class="content" id="content-node">
+    <div class="fuzz"></div>
+    <div class="logo-area">
+    <pre class="logo">
+ _                 _ _   _            _
+(_)_ __ ___   __ _(_) |_| |_ ___ _ __(_)_ __ ___
+| | '__/ __| / _` | | __| __/ _ \ '__| | '_ ` _ \
+| | | | (__ | (_| | | |_| ||  __/ |_ | | | | | | |
+|_|_|  \___(_)__, |_|\__|\__\___|_(_)|_|_| |_| |_|
+             |___/
+    </pre>
+        <blockquote id="quotes" class="logo-area-quote white"><script>document.write(quote)</script></blockquote>
+    </div>
+    <div class="instructions-wrapper">
+        <div class="instructions">
+            <a href="https://gitter.im" target="_blank" class="cyan">what is Gitter?</a><br><br>
+            <span class="green">man irc.gitter.im (this service is still very much beta)</span><br>
+
+            <ol class="green">
+                <li>1. Connect to <span class="magenta">irc.gitter.im</span> with your IRC client using SSL</li>
+                <li>2. Server Password: <span class="yellow">dc9963aab563249984caaa7174ec3da0ef76faf3</span></li>
+                <li>3. /NICK <span class="yellow">z284949127</span></li>
+                <li>4. Profit</li>
+            </ol>
+
+            <br><span class="green">100% compatible with Lynx. Seriously.</span>
+        </div>
+    </div>
+</div>
+
+<script>
+  var p = document.getElementById("content-node");
+  var p_prime = p.cloneNode(true);
+  document.body.appendChild(p_prime);
+</script>
+
+
+</body>
+</html>
